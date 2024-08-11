@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar for User Information -->
+    <div id="sidebar">
+        <div id="profile-info">
+            <img id="profile-picture" src="default-profile.png" alt="Profile Picture">
+            <h3 id="profile-username">Username</h3>
+            <p id="profile-email">Email</p>
+            <button id="edit-profile-btn">Edit Profile</button>
+        </div>
+        <!-- Notifications -->
+        <div id="notifications">
+            <h4>Notifications</h4>
+            <ul id="notification-list"></ul>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="main-content">
+        <!-- Post Form -->
+        <div id="create-post">
+            <form id="post-form">
+                <textarea id="post-text" placeholder="What's on your mind?" required></textarea>
+                <input type="file" id="post-image">
+                <button type="submit">Post</button>
+            </form>
+        </div>
+
+        <!-- Post Feed -->
+        <div id="post-feed"></div>
+    </div>
+
+    <!-- Registration & Login Forms -->
+    <div id="auth-container">
+        <form id="registration-form" class="auth-form">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+            <p>Already have an account? <span id="switch-to-login">Login here</span></p>
+        </form>
+
+        <form id="login-form" class="auth-form hidden">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <span id="switch-to-register">Register here</span></p>
+        </form>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="edit-profile-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Edit Profile</h2>
+            <input type="text" id="edit-username" placeholder="Username" required>
+            <input type="email" id="edit-email" placeholder="Email" required>
+            <input type="file" id="edit-profile-picture">
+            <button id="save-profile-btn">Save Changes</button>
+            <button id="close-modal-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
